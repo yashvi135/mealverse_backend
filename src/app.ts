@@ -16,8 +16,9 @@ app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? ['https://mealverse.in', 'https://www.mealverse.in']
     : ['http://localhost:8080', 'http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 
